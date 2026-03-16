@@ -77,15 +77,9 @@ Toronto posts:
 
 ## Contact Info
 
-### KW Office
-- Phone: (519) 555-0199 / `+15195550199`
+- Phone: (647) 787-2244 / `+16477872244` (single number for all regions)
 - Email: `info@zerobitepest.ca`
-- Address: 123 King Street West, Suite 200, Kitchener, ON N2G 1A1
-
-### Toronto Office
-- Phone: (416) 555-0199 / `+14165550199`
-- Email: `toronto@zerobitepest.ca`
-- Address: 100 King Street West, Suite 5700, Toronto, ON M5X 1C7
+- No physical address displayed on site
 
 ---
 
@@ -94,16 +88,22 @@ Toronto posts:
 ### Variant A — Brand-level pages (`/`, `/about/`, `/contact/`, `/services/`, `/blog/`, `/blog/*`, `/thank-you/`)
 - Nav Home link: `/`
 - Mega-menu service links: all point to `/services/`
-- Header phone: (519) 555-0199 (KW primary)
-- Footer: KW office address, both regions in Service Areas
+- Header phone: (647) 787-2244
+- Footer: no address, all 18 city links in Service Areas
 - Footer copyright: "Serving Ontario"
 
 ### Variant B — Region-scoped pages (`/kitchener-waterloo/*`, `/toronto/*`)
 - Nav Home link: `/kitchener-waterloo/` or `/toronto/` (regional hub)
 - Mega-menu service links: point to regional service pages (e.g., `/toronto/bed-bug-control/`)
-- Header phone: regional phone number
-- Footer: regional office address, "Also Serving: [other region]" link
+- Header phone: (647) 787-2244
+- Footer: no address, all 18 city links in Service Areas (same as Variant A)
 - Footer copyright: "Serving Ontario"
+
+### Footer Notes
+- No physical addresses anywhere on site
+- Single phone number (647) 787-2244 on all pages
+- Single email info@zerobitepest.ca on all pages
+- All 18 city page links in every footer (8 KW + 10 Toronto) for SEO
 
 ---
 
