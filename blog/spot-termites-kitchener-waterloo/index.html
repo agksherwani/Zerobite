@@ -22,6 +22,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500&display=swap" media="print" onload="this.media='all'">
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+  <script>var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/style.css">
 
@@ -102,20 +103,20 @@
       <div class="nav-services" tabindex="0">
         <a href="/services/">Services <span class="caret" aria-hidden="true">&#9660;</span></a>
         <div class="mega-menu" role="menu" aria-label="Service pages">
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#128027;</span> Bed Bug Removal</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#128045;</span> Rodent Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#128028;</span> Ant Extermination</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#129707;</span> Cockroach Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#129437;</span> Wildlife Removal</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#129717;</span> Termite Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#128029;</span> Wasp &amp; Hornet Removal</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#128375;</span> Tick Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#129419;</span> Moth Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#128376;</span> Spider Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#129439;</span> Flea Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#128031;</span> Silverfish Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#129710;</span> Earwig Control</a>
-          <a href="/services/" role="menuitem"><span class="mega-icon">&#127970;</span> Commercial Pest Control</a>
+          <a href="/services/bed-bug-control/" role="menuitem"><span class="mega-icon">&#128027;</span> Bed Bug Removal</a>
+          <a href="/services/rodent-control/" role="menuitem"><span class="mega-icon">&#128045;</span> Rodent Control</a>
+          <a href="/services/ant-control/" role="menuitem"><span class="mega-icon">&#128028;</span> Ant Extermination</a>
+          <a href="/services/cockroach-control/" role="menuitem"><span class="mega-icon">&#129707;</span> Cockroach Control</a>
+          <a href="/services/wildlife-removal/" role="menuitem"><span class="mega-icon">&#129437;</span> Wildlife Removal</a>
+          <a href="/services/termite-control/" role="menuitem"><span class="mega-icon">&#129717;</span> Termite Control</a>
+          <a href="/services/wasp-removal/" role="menuitem"><span class="mega-icon">&#128029;</span> Wasp &amp; Hornet Removal</a>
+          <a href="/services/tick-control/" role="menuitem"><span class="mega-icon">&#128375;</span> Tick Control</a>
+          <a href="/services/moth-control/" role="menuitem"><span class="mega-icon">&#129419;</span> Moth Control</a>
+          <a href="/services/spider-control/" role="menuitem"><span class="mega-icon">&#128376;</span> Spider Control</a>
+          <a href="/services/flea-control/" role="menuitem"><span class="mega-icon">&#129439;</span> Flea Control</a>
+          <a href="/services/silverfish-control/" role="menuitem"><span class="mega-icon">&#128031;</span> Silverfish Control</a>
+          <a href="/services/earwig-control/" role="menuitem"><span class="mega-icon">&#129710;</span> Earwig Control</a>
+          <a href="/services/commercial-pest-control/" role="menuitem"><span class="mega-icon">&#127970;</span> Commercial Pest Control</a>
         </div>
       </div>
       <a href="/about/">About</a>
@@ -129,6 +130,7 @@
 
     <a href="/contact/" class="btn btn-primary btn-sm header-cta">Free Quote</a>
 
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
     <button class="menu-toggle" id="menu-open" aria-label="Open menu" aria-expanded="false">
       <i class="fas fa-bars" aria-hidden="true"></i>
     </button>

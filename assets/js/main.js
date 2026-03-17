@@ -128,7 +128,33 @@
     });
   });
 
-  // 8. MEGA MENU — keyboard accessibility
+  // 8. THEME TOGGLE — dark/light mode
+  var themeToggle = document.getElementById('theme-toggle');
+  function getPreferredTheme() {
+    var stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeToggle) {
+      themeToggle.innerHTML = theme === 'dark'
+        ? '<i class="fas fa-sun" aria-hidden="true"></i>'
+        : '<i class="fas fa-moon" aria-hidden="true"></i>';
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+  }
+  applyTheme(getPreferredTheme());
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  }
+
+  // 9. MEGA MENU — keyboard accessibility
   var megaTrigger = document.querySelector('.nav-services');
   if (megaTrigger) {
     megaTrigger.addEventListener('keydown', function (e) {

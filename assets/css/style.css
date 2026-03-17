@@ -1793,3 +1793,78 @@ header.scrolled {
     padding: 2rem 1rem;
   }
 }
+
+/* ── 23. Dark Theme ──────────────────────────────────── */
+[data-theme="dark"] {
+  --navy:        #080f1a;
+  --navy-mid:    #0f1d30;
+  --light-bg:    #111d2e;
+  --white:       #162236;
+  --text:        #e2e8f0;
+  --text-muted:  #94a3b8;
+  --border:      #1e3a52;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,.25);
+  --shadow-md:   0 8px 32px rgba(0,0,0,.35);
+  --glass-bg:    rgba(255, 255, 255, 0.04);
+  --glass-border:rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] body {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] .btn-outline {
+  border-color: rgba(255,255,255,.3);
+  color: var(--text);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  background: rgba(255,255,255,.08);
+}
+
+[data-theme="dark"] .faq-question {
+  background: var(--navy-mid);
+  color: var(--text);
+}
+
+[data-theme="dark"] .faq-item {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .quote-form input,
+[data-theme="dark"] .quote-form select,
+[data-theme="dark"] .quote-form textarea {
+  background: var(--navy-mid);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+[data-theme="dark"] .mega-menu {
+  background: var(--navy-mid);
+}
+
+[data-theme="dark"] .mobile-overlay {
+  background: var(--navy);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.85);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background .2s, border-color .2s;
+  margin-left: .5rem;
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.4);
+}
