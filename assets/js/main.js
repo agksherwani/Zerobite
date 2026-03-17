@@ -133,7 +133,7 @@
   function getPreferredTheme() {
     var stored = localStorage.getItem('theme');
     if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   }
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
