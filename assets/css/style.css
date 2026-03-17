@@ -569,6 +569,10 @@ header.scrolled {
   font-size: 1.5rem;
   cursor: pointer;
   padding: .25rem;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Mobile Overlay */
@@ -656,16 +660,8 @@ header.scrolled {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('/assets/img/hero-shield.webp') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(13,43,69,.92) 0%, rgba(14,138,110,.7) 100%);
   overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(13,43,69,.85) 0%, rgba(14,138,110,.6) 100%);
-  z-index: 1;
 }
 
 .hero-content {
@@ -1231,16 +1227,30 @@ header.scrolled {
 }
 
 .carousel-dot {
-  width: 10px;
-  height: 10px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(255,255,255,.3);
+  background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.carousel-dot::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: background .2s ease;
 }
 
-.carousel-dot.active {
+.carousel-dot.active::after {
   background: var(--gold);
 }
 
@@ -1385,9 +1395,12 @@ header.scrolled {
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
-.footer-col h4 {
+.footer-col h4,
+.footer-col .footer-heading {
   color: var(--white);
+  font-family: var(--font-head);
   font-size: .95rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -1407,8 +1420,8 @@ header.scrolled {
 }
 
 .footer-social a {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(255,255,255,.1);
   display: flex;
@@ -1547,8 +1560,8 @@ header.scrolled {
 .stagger > *:nth-child(4) { transition-delay: .35s; }
 
 @keyframes pulse-gold {
-  0%, 100% { filter: drop-shadow(0 4px 10px rgba(244,161,36,.4)); }
-  50%      { filter: drop-shadow(0 4px 18px rgba(244,161,36,.7)); }
+  0%, 100% { box-shadow: 0 4px 10px rgba(244,161,36,.4); }
+  50%      { box-shadow: 0 4px 18px rgba(244,161,36,.7); }
 }
 
 /* ── 20. Utility Classes ──────────────────────────────── */
@@ -1854,8 +1867,8 @@ header.scrolled {
   color: rgba(255,255,255,.85);
   cursor: pointer;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1867,4 +1880,14 @@ header.scrolled {
 .theme-toggle:hover {
   background: rgba(255,255,255,.1);
   border-color: rgba(255,255,255,.4);
+}
+
+/* ── 24. Font Awesome font-display override ──────────── */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-display: swap;
 }
