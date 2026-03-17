@@ -7,20 +7,20 @@
 /* Fallback fonts sized to match Sora / DM Sans metrics so text doesn't reflow on swap */
 @font-face {
   font-family: 'Sora Fallback';
-  src: local('Arial');
-  size-adjust: 97.5%;
-  ascent-override: 100%;
-  descent-override: 25%;
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 85.2913%;
+  descent-override: 25.4995%;
   line-gap-override: 0%;
+  size-adjust: 113.7279%;
 }
 
 @font-face {
   font-family: 'DM Sans Fallback';
-  src: local('Arial');
-  size-adjust: 105%;
-  ascent-override: 95%;
-  descent-override: 25%;
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 94.9001%;
+  descent-override: 29.6563%;
   line-gap-override: 0%;
+  size-adjust: 104.531%;
 }
 
 /* ── 1. Custom Properties ─────────────────────────────── */
