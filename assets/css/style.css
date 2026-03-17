@@ -64,7 +64,6 @@ img {
 a {
   color: var(--teal);
   text-decoration: none;
-  transition: color .2s ease;
 }
 
 a:hover {
@@ -215,16 +214,32 @@ p {
 }
 
 .btn-primary {
+  position: relative;
   background: var(--gold);
   color: var(--navy);
   border-color: var(--gold);
-  animation: pulse-gold 2.8s ease-in-out infinite;
+  box-shadow: 0 4px 10px rgba(244,161,36,.4);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 4px 18px rgba(244,161,36,.7);
+  opacity: 0;
+  animation: pulse-gold-fade 2.8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .btn-primary:hover {
-  animation: none;
   background: #e5941a;
   box-shadow: 0 6px 24px rgba(244,161,36,.5);
+}
+
+.btn-primary:hover::after {
+  animation: none;
+  opacity: 0;
 }
 
 .btn-outline {
@@ -587,12 +602,14 @@ header.scrolled {
   justify-content: center;
   gap: 1.5rem;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity .3s ease;
+  transition: opacity .3s ease, visibility .3s ease;
 }
 
 .mobile-overlay.open {
   opacity: 1;
+  visibility: visible;
   pointer-events: all;
 }
 
@@ -928,7 +945,7 @@ header.scrolled {
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
-  transition: all .2s ease;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
 
 .city-chip:hover {
@@ -1539,7 +1556,17 @@ header.scrolled {
   box-shadow: 0 4px 20px rgba(244,161,36,.5);
   z-index: 999;
   text-decoration: none;
-  animation: pulse-gold 2.8s ease-in-out infinite;
+}
+
+.floating-phone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 4px 24px rgba(244,161,36,.7);
+  opacity: 0;
+  animation: pulse-gold-fade 2.8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 /* ── 19. Animations ───────────────────────────────────── */
@@ -1559,9 +1586,9 @@ header.scrolled {
 .stagger > *:nth-child(3) { transition-delay: .25s; }
 .stagger > *:nth-child(4) { transition-delay: .35s; }
 
-@keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 4px 10px rgba(244,161,36,.4); }
-  50%      { box-shadow: 0 4px 18px rgba(244,161,36,.7); }
+@keyframes pulse-gold-fade {
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
 }
 
 /* ── 20. Utility Classes ──────────────────────────────── */
@@ -1890,4 +1917,15 @@ header.scrolled {
 @font-face {
   font-family: 'Font Awesome 6 Brands';
   font-display: swap;
+}
+
+/* ── 25. Reduced Motion ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary::after,
+  .floating-phone::after {
+    animation: none;
+  }
+  .reveal {
+    transition: none;
+  }
 }
