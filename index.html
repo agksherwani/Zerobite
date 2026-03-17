@@ -25,7 +25,9 @@
   <script>var t=localStorage.getItem("theme")||"light";document.documentElement.setAttribute("data-theme",t);</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <style>
-    :root{--navy:#0D2B45;--navy-mid:#163D61;--teal:#0E8A6E;--teal-light:#12A882;--lime:#4AC97E;--gold:#F4A124;--light-bg:#F0F7F4;--white:#FFFFFF;--text:#1C2B3A;--text-muted:#5A7285;--border:#D4E6DD;--glass-bg:rgba(255,255,255,.07);--glass-border:rgba(255,255,255,.15);--glass-blur:blur(12px);--shadow-sm:0 2px 8px rgba(13,43,69,.08);--max-w:1200px;--font-head:'Sora',sans-serif;--font-body:'DM Sans',sans-serif;--radius:14px}
+    @font-face{font-family:'Sora Fallback';src:local('Arial');size-adjust:97.5%;ascent-override:100%;descent-override:25%;line-gap-override:0%}
+    @font-face{font-family:'DM Sans Fallback';src:local('Arial');size-adjust:105%;ascent-override:95%;descent-override:25%;line-gap-override:0%}
+    :root{--navy:#0D2B45;--navy-mid:#163D61;--teal:#0E8A6E;--teal-light:#12A882;--lime:#4AC97E;--gold:#F4A124;--light-bg:#F0F7F4;--white:#FFFFFF;--text:#1C2B3A;--text-muted:#5A7285;--border:#D4E6DD;--glass-bg:rgba(255,255,255,.07);--glass-border:rgba(255,255,255,.15);--glass-blur:blur(12px);--shadow-sm:0 2px 8px rgba(13,43,69,.08);--max-w:1200px;--font-head:'Sora','Sora Fallback',sans-serif;--font-body:'DM Sans','DM Sans Fallback',sans-serif;--radius:14px}
     [data-theme="dark"]{--navy:#080f1a;--navy-mid:#0f1d30;--light-bg:#111d2e;--white:#162236;--text:#e2e8f0;--text-muted:#94a3b8;--border:#1e3a52;--glass-bg:rgba(255,255,255,.04);--glass-border:rgba(255,255,255,.08)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}body{font-family:var(--font-body);font-size:.97rem;line-height:1.8;color:var(--text);background:var(--white);overflow-x:hidden}
     h1,h2,h3{font-family:var(--font-head);color:var(--text);line-height:1.15}h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1.08}

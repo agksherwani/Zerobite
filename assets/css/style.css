@@ -3,6 +3,26 @@
    ONE shared stylesheet. All pages link here.
    ══════════════════════════════════════════════════════════ */
 
+/* ── 0. Font Metric Overrides (CLS prevention) ───────── */
+/* Fallback fonts sized to match Sora / DM Sans metrics so text doesn't reflow on swap */
+@font-face {
+  font-family: 'Sora Fallback';
+  src: local('Arial');
+  size-adjust: 97.5%;
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'DM Sans Fallback';
+  src: local('Arial');
+  size-adjust: 105%;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
 /* ── 1. Custom Properties ─────────────────────────────── */
 :root {
   --navy:        #0D2B45;
@@ -28,8 +48,8 @@
   --max-w: 1200px;
   --section-pad: clamp(3rem, 7vw, 5.5rem) 1.5rem;
 
-  --font-head: 'Sora', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-head: 'Sora', 'Sora Fallback', sans-serif;
+  --font-body: 'DM Sans', 'DM Sans Fallback', sans-serif;
   --radius: 14px;
   --radius-lg: 24px;
 }
@@ -485,7 +505,6 @@ header.scrolled {
   color: rgba(255,255,255,.85);
   font-size: .9rem;
   font-weight: 500;
-  transition: color .2s ease;
   text-decoration: none;
 }
 
@@ -545,7 +564,6 @@ header.scrolled {
   border-radius: 8px;
   color: rgba(255,255,255,.8);
   font-size: .85rem;
-  transition: background .2s ease, color .2s ease;
 }
 
 .mega-menu a:hover {
@@ -604,7 +622,7 @@ header.scrolled {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .3s ease, visibility .3s ease;
+  transition: opacity .3s ease;
 }
 
 .mobile-overlay.open {
@@ -945,7 +963,7 @@ header.scrolled {
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
-  transition: background .2s ease, color .2s ease, border-color .2s ease;
+  transition: background .2s ease;
 }
 
 .city-chip:hover {
@@ -1035,7 +1053,6 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: .3rem;
-  transition: color .2s ease;
 }
 
 .neighbourhood-list a:hover {
@@ -1133,7 +1150,6 @@ header.scrolled {
   font-size: .88rem;
   padding: .35rem 0;
   border-bottom: 1px solid rgba(255,255,255,.08);
-  transition: color .2s ease;
 }
 
 .sidebar-widget .sidebar-links a:hover {
@@ -1468,7 +1484,6 @@ header.scrolled {
 .footer-links a {
   color: rgba(255,255,255,.7);
   font-size: .88rem;
-  transition: color .2s ease;
 }
 
 .footer-links a:hover {
@@ -1900,7 +1915,7 @@ header.scrolled {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  transition: background .2s, border-color .2s;
+  transition: background .2s;
   margin-left: .5rem;
 }
 
