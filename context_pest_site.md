@@ -78,7 +78,7 @@ Toronto posts:
 ## Contact Info
 
 - Phone: (647) 787-2244 / `+16477872244` (single number for all regions)
-- Email: `info@zerobitepest.ca`
+- Email: `info@zerobitepestcontrol.ca`
 - No physical address displayed on site
 
 ---
@@ -102,7 +102,7 @@ Toronto posts:
 ### Footer Notes
 - No physical addresses anywhere on site
 - Single phone number (647) 787-2244 on all pages
-- Single email info@zerobitepest.ca on all pages
+- Single email info@zerobitepestcontrol.ca on all pages
 - All 18 city page links in every footer (8 KW + 10 Toronto) for SEO
 
 ---
