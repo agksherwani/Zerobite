@@ -1546,8 +1546,8 @@ header.scrolled {
 .stagger > *:nth-child(4) { transition-delay: .35s; }
 
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 4px 20px rgba(244,161,36,.4); }
-  50%      { box-shadow: 0 4px 36px rgba(244,161,36,.7); }
+  0%, 100% { filter: drop-shadow(0 4px 10px rgba(244,161,36,.4)); }
+  50%      { filter: drop-shadow(0 4px 18px rgba(244,161,36,.7)); }
 }
 
 /* ── 20. Utility Classes ──────────────────────────────── */
