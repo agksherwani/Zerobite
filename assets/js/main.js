@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
-   KW Shield Pest Control — main.js
+   ZeroBite Pest Control — main.js
    ONE shared script. All pages link here.
    No jQuery. No frameworks. Vanilla JS only.
    ══════════════════════════════════════════════════════════ */

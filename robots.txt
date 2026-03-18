@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you/
 
-Sitemap: https://www.zerobitepest.ca/sitemap-index.xml
+Sitemap: https://zerobitepestcontrol.ca/sitemap-index.xml
